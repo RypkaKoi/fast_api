@@ -54,13 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(e => {
       if (!e.isIntersecting) return;
       e.target.classList.add('in-view');
-      $$('.num[data-count]', e.target).forEach(runCounter);
-      if (e.target.matches('.num[data-count]')) runCounter(e.target);
+      $$('[data-count]', e.target).forEach(runCounter);
       $$('[data-fill]', e.target).forEach(b => b.querySelector('i').style.width = b.dataset.fill + '%');
       io.unobserve(e.target);
     });
   }, { threshold: .2 });
-  $$('.reveal, .stats-band, table, .modes-grid, .matches-grid').forEach(el => io.observe(el));
+  $$('.reveal, .stats-band, table, .modes-grid, .matches-grid, .hero-stats').forEach(el => io.observe(el));
 
   /* ---- курсор-свечение ---- */
   const glow = $('#glow');
@@ -103,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       meter.className = 'strength s' + s;
     });
 
-    // проверка ника (демо)
+    // проверка имени (демо)
     const nick = $('#reg-nick'), nickHint = $('#nick-hint');
     const TAKEN = ['admin', 'neoncore', 'moderator', 'support', 'root'];
     let t;
@@ -111,11 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
       clearTimeout(t);
       const v = nick.value.trim().toLowerCase();
       if (!v) { nickHint.textContent = ''; nickHint.className = 'hint'; return; }
-      nickHint.textContent = '> проверка позывного...'; nickHint.className = 'hint';
+      nickHint.textContent = '> проверка имени...'; nickHint.className = 'hint';
       t = setTimeout(() => {
         if (v.length < 3) { nickHint.textContent = '> ошибка: минимум 3 символа'; nickHint.className = 'hint err'; }
-        else if (TAKEN.includes(v)) { nickHint.textContent = '> позывной занят'; nickHint.className = 'hint err'; }
-        else { nickHint.textContent = '> позывной свободен ✓'; nickHint.className = 'hint ok'; }
+        else if (TAKEN.includes(v)) { nickHint.textContent = '> имя уже занято'; nickHint.className = 'hint err'; }
+        else { nickHint.textContent = '> имя свободно ✓'; nickHint.className = 'hint ok'; }
       }, 550);
     });
 
@@ -134,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '> установка соединения с сервером NEONCORE...',
         '> handshake: OK [24ms]',
         '> шифрование канала: AES-256 ... OK',
-        mode === 'register' ? '> запись профиля в реестр арены... OK' : '> сверка ключей доступа... OK'
+        mode === 'register' ? '> запись профиля в реестр платформы... OK' : '> сверка ключей доступа... OK'
       ];
       const step = REDUCED ? 60 : 420;
       lines.forEach((l, i) => setTimeout(() => {
@@ -145,10 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         if (mode === 'register') {
           finalEl.textContent = 'АККАУНТ СОЗДАН';
-          nameEl.textContent = `Добро пожаловать на арену, ${name || 'боец'}.`;
+          nameEl.textContent = `Добро пожаловать на платформу, ${name || 'коллега'}.`;
         } else {
           finalEl.textContent = 'ДОСТУП РАЗРЕШЁН';
-          nameEl.textContent = `С возвращением, ${name || 'боец'}.`;
+          nameEl.textContent = `С возвращением, ${name || 'коллега'}.`;
         }
         scramble(finalEl, 700);
       }, step * lines.length + 250);
