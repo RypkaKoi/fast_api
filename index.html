@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEONCORE — арена киберспорта</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="glow"></div>
+<div class="site">
+
+  <!-- HUD -->
+  <header class="hud">
+    <div class="container hud-inner">
+      <a class="logo glitch" data-text="NEONCORE" href="index.html">NEON<b>CORE</b><small>ARENA PROTOCOL v2.7</small></a>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="active">Главная</a>
+        <a href="#modes">Режимы</a>
+        <a href="#leaders">Лидеры</a>
+        <a href="#matches">Матчи</a>
+      </nav>
+      <div class="hud-right">
+        <span class="sys-clock" id="clock">--:--:--</span>
+        <a class="btn btn-ghost btn-sm" href="login.html">Вход</a>
+        <a class="btn btn-primary btn-sm" href="register.html">Регистрация</a>
+        <button class="burger" id="burger" aria-label="Меню">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ГЕРОЙ -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="container hero-inner">
+      <div>
+        <div class="chip-row">
+          <span class="chip"><span class="dot"></span> ONLINE: 12 482</span>
+          <span class="chip live-chip"><span class="dot"></span> LIVE: 37 МАТЧЕЙ</span>
+          <span class="chip">СЕЗОН 09 // НЕОН</span>
+        </div>
+        <h1>
+          <span data-scramble data-text="АРЕНА ЖДЁТ">АРЕНА ЖДЁТ</span><br>
+          <span class="accent" data-scramble data-text="ТЕБЯ, БОЕЦ">ТЕБЯ, БОЕЦ</span>
+        </h1>
+        <p class="lead">Турниры каждую неделю, клановые войны, живые рейтинги и призовые фонды. Подключайся к самой яркой киберарене 2026 года.</p>
+        <div class="hero-actions">
+          <a href="register.html" class="btn btn-primary">Создать аккаунт</a>
+          <a href="#matches" class="btn btn-ghost">Смотреть матчи</a>
+        </div>
+        <div class="hero-stats">
+          <div><b data-count="96" class="num">0</b> серверов</div>
+          <div><b data-count="24">0</b> турнира сейчас</div>
+          <div><b>0.02s</b> отклик матчмейкинга</div>
+        </div>
+      </div>
+
+      <div class="frame tournament-card">
+        <div class="inner">
+          <div class="t-thumb">
+            <img src="https://picsum.photos/seed/neon-arena-final/900/506" alt="Финал турнира">
+          </div>
+          <div class="t-body">
+            <span class="chip live-chip"><span class="dot"></span> ИДЁТ РЕГИСТРАЦИЯ</span>
+            <h3 style="margin-top:.8rem">КИБЕР-КУБОК НЕОН 2026</h3>
+            <div class="t-meta">
+              <span>ПРИЗОВОЙ ФОНД <b>1 250 000 ₽</b></span>
+              <span>ФОРМАТ 5×5</span>
+            </div>
+            <div class="bar-label"><span>СЛОТЫ</span><span>96 / 128</span></div>
+            <div class="bar" data-fill="75"><i></i></div>
+            <a href="register.html" class="btn btn-magenta btn-block">Занять слот</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- БЕГУЩАЯ СТРОКА -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-group">
+        <span>⚡ <b>FLASH_K1LLER</b> забирает клатч 1v4 на «Синтетик-9»</span>
+        <span>◆ клан <em>VOID WOLFS</em> поднимается на 2-е место сезона</span>
+        <span>◆ патч <b>2.7.1</b> «Осколок Пустоты» уже на серверах</span>
+        <span>⚡ призовой фонд Кубка Неон превысил <b>1.2 млн ₽</b></span>
+        <span>◆ <em>LUNA_BYTE</em> — 12 побед подряд в рангеде</span>
+      </div>
+      <div class="ticker-group">
+        <span>⚡ <b>FLASH_K1LLER</b> забирает клатч 1v4 на «Синтетик-9»</span>
+        <span>◆ клан <em>VOID WOLFS</em> поднимается на 2-е место сезона</span>
+        <span>◆ патч <b>2.7.1</b> «Осколок Пустоты» уже на серверах</span>
+        <span>⚡ призовой фонд Кубка Неон превысил <b>1.2 млн ₽</b></span>
+        <span>◆ <em>LUNA_BYTE</em> — 12 побед подряд в рангеде</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- РЕЖИМЫ -->
+  <section class="section" id="modes">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="sec-label">// 01 // ВЫБОР ПРОТОКОЛА</div>
+        <h2 class="sec-title"><span class="mask"><span class="mask-in">Режимы игры</span></span></h2>
+      </div>
+      <div class="modes-grid reveal">
+        <article class="frame mode-card"><div class="inner">
+          <div class="mode-thumb"><span class="mode-tag">PVP // 100</span><img src="https://picsum.photos/seed/battle-royale-neon/600/400" alt="Королева роя"></div>
+          <div class="mode-body">
+            <h3>Королева роя</h3>
+            <p>100 бойцов, один город, сужающееся неоновое кольцо. Выживает последний.</p>
+            <div class="mode-meta"><span>3 912 онлайн</span><div class="bar" data-fill="85"><i></i></div><span>ХАРДКОР</span></div>
+          </div>
+        </div></article>
+        <article class="frame mode-card"><div class="inner">
+          <div class="mode-thumb"><span class="mode-tag">5×5 // ТАКТИКА</span><img src="https://picsum.photos/seed/cyber-arena-5x5/600/400" alt="Кибер-арена 5 на 5"></div>
+          <div class="mode-body">
+            <h3>Кибер-арена 5×5</h3>
+            <p>Классическое командное противостояние: атака, защита, идеальная координация.</p>
+            <div class="mode-meta"><span>5 240 онлайн</span><div class="bar" data-fill="70"><i></i></div><span>СРЕДНЕ</span></div>
+          </div>
+        </div></article>
+        <article class="frame mode-card"><div class="inner">
+          <div class="mode-thumb"><span class="mode-tag">SPEEDRUN</span><img src="https://picsum.photos/seed/speedrun-trials/600/400" alt="Спидран-испытания"></div>
+          <div class="mode-body">
+            <h3>Спидран-испытания</h3>
+            <p>Полосы препятствий на время. Глобальный лидерборд обновляется каждую секунду.</p>
+            <div class="mode-meta"><span>1 487 онлайн</span><div class="bar" data-fill="55"><i></i></div><span>ЛЮБОЙ</span></div>
+          </div>
+        </div></article>
+        <article class="frame mode-card"><div class="inner">
+          <div class="mode-thumb"><span class="mode-tag">КЛАН // ВОЙНА</span><img src="https://picsum.photos/seed/clan-war-neon/600/400" alt="Клановые войны"></div>
+          <div class="mode-body">
+            <h3>Клановые войны</h3>
+            <p>Захватывай сектора карты, удерживай территории и поднимай клан в топ сезона.</p>
+            <div class="mode-meta"><span>2 068 онлайн</span><div class="bar" data-fill="92"><i></i></div><span>ЭЛИТА</span></div>
+          </div>
+        </div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЛИДЕРБОРД -->
+  <section class="section" id="leaders" style="padding-top:1rem">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="sec-label">// 02 // ТОП СЕЗОНА 09</div>
+        <h2 class="sec-title"><span class="mask"><span class="mask-in">Легенды арены</span></span></h2>
+      </div>
+      <div class="frame reveal"><div class="inner table-wrap">
+        <table>
+          <thead><tr><th>Ранг</th><th>Боец</th><th>Уровень</th><th>Победы</th><th>Рейтинг</th></tr></thead>
+          <tbody>
+            <tr class="top-1"><td class="rank">#01</td><td><div class="player"><img src="https://picsum.photos/seed/avatar-nova/80/80" alt="">NOVA_STRIKE</div></td><td>87</td><td>412</td><td><div class="td-bar"><div class="bar" data-fill="98"><i></i></div></div></td></tr>
+            <tr class="top-2"><td class="rank">#02</td><td><div class="player"><img src="https://picsum.photos/seed/avatar-vortex/80/80" alt="">VORTEX_9</div></td><td>82</td><td>397</td><td><div class="td-bar"><div class="bar" data-fill="93"><i></i></div></div></td></tr>
+            <tr class="top-3"><td class="rank">#03</td><td><div class="player"><img src="https://picsum.photos/seed/avatar-ghost/80/80" alt="">GHOST_REAPER</div></td><td>79</td><td>371</td><td><div class="td-bar"><div class="bar" data-fill="88"><i></i></div></div></td></tr>
+            <tr><td class="rank">#04</td><td><div class="player"><img src="https://picsum.photos/seed/avatar-pixel/80/80" alt="">PIXEL_PUNISHER</div></td><td>74</td><td>340</td><td><div class="td-bar"><div class="bar" data-fill="81"><i></i></div></div></td></tr>
+            <tr><td class="rank">#05</td><td><div class="player"><img src="https://picsum.photos/seed/avatar-luna/80/80" alt="">LUNA_BYTE</div></td><td>71</td><td>322</td><td><div class="td-bar"><div class="bar" data-fill="76"><i></i></div></div></td></tr>
+          </tbody>
+        </table>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- СТАТИСТИКА -->
+  <section class="section" style="padding-top:1rem">
+    <div class="container">
+      <div class="frame stats-band reveal"><div class="inner">
+        <div class="stat"><b class="num" data-count="248500">0</b><span>бойцов в системе</span></div>
+        <div class="stat"><b class="num" data-count="1843">0</b><span>турниров сыграно</span></div>
+        <div class="stat"><b class="num" data-count="12.5" data-decimals="1" data-suffix=" млн ₽">0</b><span>выплачено призов</span></div>
+        <div class="stat"><b class="num" data-count="96">0</b><span>серверов онлайн</span></div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- МАТЧИ -->
+  <section class="section" id="matches" style="padding-top:1rem">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="sec-label">// 03 // ПРЯМОЙ ЭФИР</div>
+        <h2 class="sec-title"><span class="mask"><span class="mask-in">Матчи сейчас</span></span></h2>
+      </div>
+      <div class="matches-grid reveal">
+        <article class="frame match"><div class="inner">
+          <div class="match-status"><span class="live">LIVE // РАУНД 24</span><span>12.4K зрителей</span></div>
+          <div class="match-teams">
+            <div class="team"><img src="https://picsum.photos/seed/team-wolfs/60/60" alt="">NEON WOLFS</div>
+            <div class="score">13:11</div>
+            <div class="team">CRIMSON FIVE<img src="https://picsum.photos/seed/team-crimson/60/60" alt=""></div>
+          </div>
+          <div class="match-foot"><span>КАРТА: СИНТЕТИК-9</span><span>КУБОК НЕОН</span></div>
+        </div></article>
+        <article class="frame match"><div class="inner">
+          <div class="match-status"><span class="live">LIVE // РАУНД 12</span><span>8.1K зрителей</span></div>
+          <div class="match-teams">
+            <div class="team"><img src="https://picsum.photos/seed/team-void/60/60" alt="">VOID RUNNERS</div>
+            <div class="score">7:5</div>
+            <div class="team">HEX SQUAD<img src="https://picsum.photos/seed/team-hex/60/60" alt=""></div>
+          </div>
+          <div class="match-foot"><span>КАРТА: НЕОН-ДОК</span><span>ЛИГА А</span></div>
+        </div></article>
+        <article class="frame match"><div class="inner">
+          <div class="match-status"><span class="done">ЗАВЕРШЁН</span><span>5.6K зрителей</span></div>
+          <div class="match-teams">
+            <div class="team"><img src="https://picsum.photos/seed/team-titan/60/60" alt="">TITAN FORGE</div>
+            <div class="score">2:0</div>
+            <div class="team">BINARY STORM<img src="https://picsum.photos/seed/team-binary/60/60" alt=""></div>
+          </div>
+          <div class="match-foot"><span>КАРТА: ЦИТАДЕЛЬ</span><span>КВАЛИФИКАЦИЯ</span></div>
+        </div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- НОВОСТИ -->
+  <section class="section" style="padding-top:1rem">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div class="sec-label">// 04 // СВОДКА</div>
+        <h2 class="sec-title"><span class="mask"><span class="mask-in">Новости арены</span></span></h2>
+      </div>
+      <div class="news-grid reveal">
+        <article class="frame news-card"><div class="inner">
+          <img src="https://picsum.photos/seed/patch-shard/640/460" alt="Патч 2.7.1">
+          <div class="news-body">
+            <span class="news-date">19.11.2026 // PATCH</span>
+            <h3>Патч 2.7.1 «Осколок Пустоты»</h3>
+            <p>Новая карта, баланс плазменного оружия и переработанный интерфейс кланового меню уже на всех серверах.</p>
+            <a href="#" class="news-link">Читать →</a>
+          </div>
+        </div></article>
+        <article class="frame news-card"><div class="inner">
+          <img src="https://picsum.photos/seed/esports-final-stage/640/460" alt="Финал кубка">
+          <div class="news-body">
+            <span class="news-date">17.11.2026 // EVENT</span>
+            <h3>Финал Кубка Неон — офлайн-арена</h3>
+            <p>Восемь лучших составов встретятся на живой арене 12 декабря. Трансляция, косплей-зона и призы зрителям.</p>
+            <a href="#" class="news-link">Читать →</a>
+          </div>
+        </div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container reveal">
+      <h2 data-scramble data-text="ГОТОВ ВОЙТИ В НЕОН?">ГОТОВ ВОЙТИ В НЕОН?</h2>
+      <p>Регистрация занимает 30 секунд. Твой позывной уже ждёт.</p>
+      <a href="register.html" class="btn btn-primary">Начать игру</a>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>NEON<b style="color:var(--cyan)">CORE</b></h4>
+        <p>Киберспортивная платформа нового поколения: турниры, кланы, рейтинги и живое комьюнити с 2023 года.</p>
+      </div>
+      <div><h4>Навигация</h4><ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#modes">Режимы</a></li>
+        <li><a href="#leaders">Лидеры</a></li>
+        <li><a href="register.html">Регистрация</a></li>
+      </ul></div>
+      <div><h4>Помощь</h4><ul>
+        <li><a href="#">Правила арены</a></li>
+        <li><a href="#">Анти-чит</a></li>
+        <li><a href="#">Поддержка</a></li>
+        <li><a href="#">API для кланов</a></li>
+      </ul></div>
+      <div><h4>Соцсети</h4><ul>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">Twitch</a></li>
+        <li><a href="#">Telegram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul></div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 NEONCORE. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</span>
+      <span class="server-ok">SERVER STATUS: ONLINE</span>
+    </div>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

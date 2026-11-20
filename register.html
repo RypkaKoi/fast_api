@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Регистрация — NEONCORE</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="glow"></div>
+<div class="site">
+
+  <header class="hud">
+    <div class="container hud-inner">
+      <a class="logo glitch" data-text="NEONCORE" href="index.html">NEON<b>CORE</b><small>ARENA PROTOCOL v2.7</small></a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Главная</a>
+        <a href="index.html#modes">Режимы</a>
+        <a href="index.html#leaders">Лидеры</a>
+        <a href="login.html">Вход</a>
+      </nav>
+      <div class="hud-right">
+        <span class="sys-clock" id="clock">--:--:--</span>
+        <a class="btn btn-primary btn-sm" href="register.html">Регистрация</a>
+        <button class="burger" id="burger" aria-label="Меню">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth">
+    <!-- арт-панель -->
+    <div class="auth-art">
+      <img src="https://picsum.photos/seed/neon-city-signup/900/1100" alt="">
+      <div class="radar" aria-hidden="true"></div>
+      <div class="auth-art-content">
+        <p class="auth-quote">«Каждая легенда арены начиналась с одного — <em>создания аккаунта</em>»</p>
+        <p class="auth-sub">// КОД ДОСТУПА ВЫДАЁТСЯ ПОСЛЕ РЕГИСТРАЦИИ</p>
+      </div>
+    </div>
+
+    <!-- форма -->
+    <div class="auth-panel">
+      <form class="auth-box" id="auth-form" data-mode="register" novalidate>
+        <div class="sec-label">// НОВЫЙ БОЕЦ // РЕГИСТРАЦИЯ</div>
+        <h1 data-scramble data-text="СОЗДАНИЕ АККАУНТА">СОЗДАНИЕ АККАУНТА</h1>
+        <p class="auth-note">Заполни данные и получи доступ к турнирам, кланам и сезонным наградам.</p>
+
+        <div class="field">
+          <label for="reg-nick">Позывной (никнейм)</label>
+          <input type="text" id="reg-nick" placeholder="Например: NEON_VIPER" required maxlength="20">
+          <div class="err-msg">&gt; введите позывной</div>
+          <div class="hint" id="nick-hint"></div>
+        </div>
+
+        <div class="field">
+          <label for="reg-email">E-mail</label>
+          <input type="email" id="reg-email" placeholder="player@arena.gg" required>
+          <div class="err-msg">&gt; введите корректный e-mail</div>
+        </div>
+
+        <div class="field">
+          <label for="reg-pass">Пароль</label>
+          <div class="pw-wrap">
+            <input type="password" id="reg-pass" placeholder="Минимум 8 символов" required minlength="8">
+            <button type="button" class="pw-toggle" aria-label="Показать пароль">SHOW</button>
+          </div>
+          <div class="strength" id="strength"><i></i><i></i><i></i><i></i></div>
+          <div class="err-msg">&gt; минимум 8 символов</div>
+        </div>
+
+        <div class="field">
+          <label for="reg-pass2">Повторите пароль</label>
+          <div class="pw-wrap">
+            <input type="password" id="reg-pass2" placeholder="Ещё раз" required>
+            <button type="button" class="pw-toggle" aria-label="Показать пароль">SHOW</button>
+          </div>
+          <div class="err-msg">&gt; пароли не совпадают</div>
+        </div>
+
+        <div class="field">
+          <label for="reg-genre">Любимый жанр</label>
+          <select id="reg-genre">
+            <option>Шутеры / FPS</option>
+            <option>Королевская битва</option>
+            <option>MOBA</option>
+            <option>Файтинги</option>
+            <option>Гонки / спорт</option>
+            <option>Стратегии</option>
+          </select>
+        </div>
+
+        <label class="check-row">
+          <input type="checkbox" id="terms" required>
+          <span>Принимаю <a href="#">правила арены</a> и политику честной игры. Читы = перманентный бан.</span>
+        </label>
+
+        <button type="submit" class="btn btn-magenta btn-block">Создать аккаунт</button>
+        <p class="auth-switch">Уже в системе? <a href="login.html">&gt; войти_</a></p>
+      </form>
+    </div>
+  </main>
+</div>
+
+<!-- boot-оверлей -->
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <div class="boot-lines"></div>
+    <div class="boot-final"></div>
+    <div class="boot-name"></div>
+    <div class="boot-bar"><i></i></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

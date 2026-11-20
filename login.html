@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход — NEONCORE</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="glow"></div>
+<div class="site">
+
+  <header class="hud">
+    <div class="container hud-inner">
+      <a class="logo glitch" data-text="NEONCORE" href="index.html">NEON<b>CORE</b><small>ARENA PROTOCOL v2.7</small></a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Главная</a>
+        <a href="index.html#modes">Режимы</a>
+        <a href="index.html#leaders">Лидеры</a>
+        <a href="register.html">Регистрация</a>
+      </nav>
+      <div class="hud-right">
+        <span class="sys-clock" id="clock">--:--:--</span>
+        <a class="btn btn-ghost btn-sm" href="login.html">Вход</a>
+        <button class="burger" id="burger" aria-label="Меню">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth">
+    <!-- арт-панель -->
+    <div class="auth-art">
+      <img src="https://picsum.photos/seed/neon-login-gate/900/1100" alt="">
+      <div class="radar" aria-hidden="true"></div>
+      <div class="auth-art-content">
+        <p class="auth-quote">«Система узнаёт своих. Введи ключ — <em>и неон ответит</em>»</p>
+        <p class="auth-sub">// МАТЧ ДНЯ: NEON WOLFS vs CRIMSON FIVE — 13:11</p>
+      </div>
+    </div>
+
+    <!-- форма -->
+    <div class="auth-panel">
+      <form class="auth-box" id="auth-form" data-mode="login" novalidate>
+        <div class="sec-label">// АВТОРИЗАЦИЯ // ДОСТУП К АРЕНЕ</div>
+        <h1 data-scramble data-text="ВХОД В СИСТЕМУ">ВХОД В СИСТЕМУ</h1>
+        <p class="auth-note">С возвращением, боец. Подтверди личность, чтобы продолжить серию.</p>
+
+        <div class="field">
+          <label for="login-id">Позывной или e-mail</label>
+          <input type="text" id="login-id" placeholder="NEON_VIPER или player@arena.gg" required>
+          <div class="err-msg">&gt; введите позывной или e-mail</div>
+        </div>
+
+        <div class="field">
+          <label for="login-pass">Пароль</label>
+          <div class="pw-wrap">
+            <input type="password" id="login-pass" placeholder="••••••••" required>
+            <button type="button" class="pw-toggle" aria-label="Показать пароль">SHOW</button>
+          </div>
+          <div class="err-msg">&gt; введите пароль</div>
+        </div>
+
+        <label class="check-row">
+          <input type="checkbox" checked>
+          <span>Запомнить меня на этом устройстве</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-block">Войти в арену</button>
+        <p class="auth-switch"><a href="#">&gt; забыл пароль?</a> &nbsp;·&nbsp; нет аккаунта? <a href="register.html">регистрация_</a></p>
+
+        <div class="divider">ИЛИ ЧЕРЕЗ</div>
+        <div class="socials">
+          <a href="#" class="social-btn" aria-label="Войти через Steam">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="8" r="2.4"/><path d="M4 20l5.5-4.5" stroke="currentColor" stroke-width="2"/></svg>
+            STEAM
+          </a>
+          <a href="#" class="social-btn" aria-label="Войти через Discord">
+            <svg viewBox="0 0 24 24"><path d="M5 5c2-1 4-1.5 7-1.5S17 4 19 5l2 12c-2 2-4 3-6 3l-.7-1.6c-1.5.3-3.1.3-4.6 0L9 20c-2 0-4-1-6-3L5 5zm4 6a1.6 1.6 0 100 3.2A1.6 1.6 0 009 11zm6 0a1.6 1.6 0 100 3.2 1.6 1.6 0 000-3.2z"/></svg>
+            DISCORD
+          </a>
+          <a href="#" class="social-btn" aria-label="Войти через Twitch">
+            <svg viewBox="0 0 24 24"><path d="M4 2L3 5v14h5v3l3-3h4l6-6V2H4zm15 11l-3 3h-4l-3 3v-3H6V4h13v9zM15 6h2v6h-2V6zm-5 0h2v6h-2V6z"/></svg>
+            TWITCH
+          </a>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+
+<!-- boot-оверлей -->
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <div class="boot-lines"></div>
+    <div class="boot-final"></div>
+    <div class="boot-name"></div>
+    <div class="boot-bar"><i></i></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
