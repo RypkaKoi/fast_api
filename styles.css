@@ -398,3 +398,33 @@ tr.top-3 .rank{color:var(--magenta)}
   #glow{display:none}
   html{scroll-behavior:auto}
 }
+
+/* ---------- иконки в полях ввода ---------- */
+.field .input-wrap{position:relative}
+.field .input-wrap input{padding-left:2.7rem}
+.input-icon{
+  position:absolute;left:1rem;top:50%;transform:translateY(-50%);
+  width:17px;height:17px;color:var(--cyan);opacity:.7;pointer-events:none;transition:.25s;
+}
+.field .input-wrap:focus-within .input-icon{
+  opacity:1;color:#fff;filter:drop-shadow(0 0 6px rgba(0,240,255,.9));
+}
+
+/* ---------- выбор аватара ---------- */
+.avatar-pick{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:.55rem}
+.avatar-opt{cursor:pointer;position:relative}
+.avatar-opt input{position:absolute;opacity:0;pointer-events:none}
+.avatar-opt img{
+  width:58px;height:58px;object-fit:cover;display:block;
+  clip-path:polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%);
+  filter:grayscale(.85) brightness(.7);transition:transform .25s,filter .25s;
+}
+.avatar-opt:hover img{transform:translateY(-3px);filter:grayscale(.3) brightness(.9)}
+.avatar-opt input:checked + img{transform:scale(1.12);filter:drop-shadow(0 0 10px rgba(0,240,255,.8))}
+.avatar-opt::after{
+  content:'✓';position:absolute;right:-4px;bottom:-4px;width:18px;height:18px;
+  display:grid;place-items:center;background:var(--cyan);color:#02141a;
+  font-weight:900;font-size:.7rem;opacity:0;transform:scale(.4);transition:.25s;
+  clip-path:polygon(20% 0,100% 0,100% 80%,80% 100%,0 100%,0 20%);
+}
+.avatar-opt:has(input:checked)::after{opacity:1;transform:scale(1)}
